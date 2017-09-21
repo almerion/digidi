@@ -9,9 +9,17 @@ class GameScreen:
     def __init__(self):
         gameWindow = tk.Tk()
         
+        gameWindow.option_add("*Button.Background", "black")
+        gameWindow.option_add("*Button.Background", "red")
+
         gameWindow.title("digidi")
         gameWindow.geometry("500x500")
-        start_button = tk.Button(gameWindow, text = "Start", command = self.createStartScreen)
+        
+        back = tk.Frame(master=gameWindow, bg="black")
+        back.pack_propagate(0)
+        back.pack(fill=tk.BOTH, expand = 1)
+
+        start_button = tk.Button(master = back, text = "Start", command = self.createStartScreen)
 
         start_button.pack()
         gameWindow.mainloop()
