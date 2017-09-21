@@ -9,7 +9,6 @@ class GameScreen:
     def __init__(self):
         gameWindow = tk.Tk()
         
-        gameWindow.option_add("*Button.Background", "black")
         gameWindow.option_add("*Button.Background", "red")
 
         gameWindow.title("digidi")
